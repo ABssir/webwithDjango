@@ -1,0 +1,115 @@
+<title>Contact | SecHint</title>
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+    <!-- HEADER-SECTION -->
+    <div class="home-header-section">
+
+        <!-- BANNER-SECTION -->
+        <div class="home-banner-section overflow-hidden">
+            <div class="banner-container-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 mb-md-0 mb-4  text-center">
+                            <div class="about-banner-text" data-aos="fade-up">
+                                <h1 class="text-white about-h1"  data-aos="zoom-out-left">ارتباط با ما</h1>
+                                <p class="text-white banner-paragraph"  data-aos="zoom-out-right"></p>
+                                <div class="about-btn">
+                                    <a href="{% url 'contact:contact' %}" class="text-decoration-none">Home <span class="about-text-color"> /
+                                            Contact</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 mb-md-0 mb-4">
+                            <div class="about-us-section-page contact-us-section" data-aos="fade-up">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <h3 class="contact-us-title rastchin" data-aos="fade-up-left">برای هر سوالی به ما پیام دهید</h3>
+                                        <p class="rastchin" data-aos="fade-up-right">:راه های ارتباطی ما با شما</p>
+                                        <ul class="list-unstyled about-us-list">
+                                        <li class="contact-li"><div class="icons-rounded-box-contact">
+                                        <figure class="mb-0"><img src="{% static 'assets/images/contact-icon1.png' %}"  alt=""></figure></div>
+                                        <div class="contact-content">
+                                                <span class="contact-title">آدرس:</span>
+                                                 <span class="contact-parah">Iran Mashhad</span></div></li>
+                                                 
+                                          <li class="contact-li"><div class="icons-rounded-box-contact">
+                                            <figure class="mb-0"><img src="{% static 'assets/images/contact-icon2.png' %}" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="contact-content">
+                                            <span class="contact-title">تلفن:</span>
+                                            <span class="contact-parah">+98 993 449 8145</span>
+                                        </div></li>
+                                        <li class="contact-li"><div class="icons-rounded-box-contact">
+                                            <figure class="mb-0"><img src="{% static 'assets/images/contact-icon3.png' %}" alt="">
+                                            </figure>
+                                        </div><div class="contact-content">
+                                            <span class="contact-title">Email:</span>
+                                            <span class="contact-parah">info@sechint.com</span>
+                                        </div></li>
+                                        </ul><br><br><br>
+                                        <div class="social-icons" data-aos="zoom-out-left">
+                                            <ul class="list-unstyled">
+                                                <li><a class="text-decoration-none" href="#"><i class="fa-regular fa-horizontal-rule"></i></a></li>
+                                                <li><a class="text-decoration-none" href="#"><i class="fa-regular fa-horizontal-rule"></i></a></li>
+                                                <li><a class="text-decoration-none" href="#"><i class="fa-regular fa-horizontal-rule"></i></a></li>
+
+                                                <li><a href="" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+                                                <li><a href="https://t.me/sec_hint" class="text-decoration-none"><i class="fa-brands fa-telegram social-networks"></i></a></li>
+                                                <li><a href="" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+                                                <li><a href="" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+
+                                            </ul>
+                            </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="about-section-form">
+                                            <form method="POST" action="contact-form.php">
+                                                <div class="form-group contact-form-margin">
+                                                    <input type="text" class="form-control input-text"
+                                                        id="validationCustom01" placeholder="Your Name" required="" name="name">
+                                                </div>
+                                                <div class="form-group contact-form-margin">
+                                                    <input type="text" class="form-control input-text"
+                                                        id="validationCustom02" placeholder="Your Email" required="" name="email">
+                                                </div>
+                                                <div class="form-group contact-form-margin">
+                                                    <input type="text" class="form-control input-text"
+                                                        id="validationCustom03" placeholder="Subject" required="" name="subject">
+                                                </div>
+                                                <div class="form-group contact-form-margin-text-area">
+                                                    <textarea name="comments" id="message" cols="10" rows="10" class="form-control" placeholder="Your Message"></textarea>
+                                                </div>
+                                                <div class="contact-section-btn text-center">
+                                                    <button type="submit" class="btn btn-primary hover-effect">ارسال</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- MAP-Section -->
+<!-- ICONS_SECTION -->
+    <section class="icons-section overflow-hidden">
+        <div class="container">
+        </div>
+    </section>
+<!-- ICONS_SECTION -->
+    <section class="icons-section overflow-hidden">
+        <div class="container">
+        </div>
+    </section>
+
+
+{% endblock content %}

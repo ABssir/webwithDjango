@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{%block title%}{{articles.title}}{% endblock %}
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'django_ckeditor_5/dist/styles.css' %}" type="text/css">
+<link rel="stylesheet" href="{% static 'django_ckeditor_5/dist/style-ck-2.css' %}" type="text/css">
+<body>
+     <!-- HEADER-SECTION -->
+     <div class="home-header-section">
+      
+      <!-- BANNER-SECTION -->
+      <div class="home-banner-section overflow-hidden">
+          <div class="banner-container-box">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12 mb-md-0 mb-4  text-center">
+                          <div class="about-banner-text" data-aos="fade-up">
+                              <h1 class="text-white about-h1" data-aos="zoom-out-left">Blog -{{ object.title }}</h1>
+                              
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- header and banner section -->
+  <section class="blog-posts padding-top padding-bottom overflow single-post-blog overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 col-lg-9">
+          <div id="blog" class="single-post01 wow slideInLeft" data-aos="fade-up">
+            <div class="post-item">
+              <div class="post-item-wrap">
+                <div class="post-image">
+                  <a href="#">
+                    <img alt="" src="{{object.thumbnail.url}}" style="width:100%; height: 300px;" />
+                  </a>
+                </div>
+                <div class="post-item-description rastchin ">
+                  <h2 class="mb-0">{{ object.title }}</h2>
+                  <div class="post-meta">
+                    <span class="post-meta-date color01"> {{object.publish|date:"Y-m-d H:i"}} </span>
+                    
+                    <span class="post-meta-date color01"> {{ object.reading_time_minutes }}دقیقه</span>
+                    <span class="post-meta-comments color01">{{object.author.get_full_name}}</span>
+                  </div>
+                  <div class="ck-content ck-2">
+                    {{object.description|safe}}
+                  </div>
+                </div>
+                <div class="post-tags">
+                  {% for cat in categories_article %}
+                    <a href="{% url 'blog:category' cat.slug %}">{{cat.title}}</a>
+                  {% endfor %}
+                  <!--post-tags-->
+                </div>
+                <div class="comments" id="comments">
+                  
+                  
+                  <!--comments-->
+                </div>
+                <!--post-item-wrap-->
+              </div>
+              <!--post-item-->
+            </div>
+            <!--single-post01-->
+          </div>
+          <!--col-->
+        </div>
+        <div class="sidebar sticky-sidebar col-lg-3 wow slideInRight">
+          <div class="theiaStickySidebar">
+            <div class="widget widget-newsletter">
+              <form id="widget-search-form-sidebar" class="form-inline">
+                <div class="input-group">
+                  <input type="text" aria-required="true" name="q" class="form-control widget-search-form"
+                    placeholder="Search for pages..." />
+                  <div class="input-group-append">
+                    <span class="input-group-btns">
+                      <button type="submit" id="widget-widget-search-form-button" class="btn">
+                        <span class="fa fa-search"></span>
+                      </button>
+                    </span>
+                    <!--input-group-append-->
+                  </div>
+                  <!--input-group-->
+                </div>
+                <!--form-inline-->
+              </form>
+              <!--widget-->
+            </div>
+            <div class="widget">
+              <div class="tabs">
+                <ul class="nav nav-tabs" id="tabs-posts" role="tablist">
+                  <li class="nav-item p-0">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular" role="tab"
+                      aria-controls="popular" aria-selected="true">Popular</a>
+                  </li>
+                  <li class="nav-item p-0">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#featured" role="tab"
+                      aria-controls="featured" aria-selected="false">Featured</a>
+                  </li>
+                  <li class="nav-item p-0">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#recent" role="tab"
+                      aria-controls="recent" aria-selected="false">Recent</a>
+                  </li>
+                  <!--nav-tabs-->
+                </ul>
+                <div class="tab-content" id="tabs-posts-content">
+                  <div class="tab-pane fade show active" id="popular" role="tabpanel">
+                    <div class="post-thumbnail-list">
+                      <div class="post-thumbnail-entry">
+                        <a href="three-colum-sidbar.html"><img alt="" src="assets/images/side_post_img01.jpg"
+                            class="img-fluid" /></a>
+                        <div class="post-thumbnail-content">
+                          <a href="three-colum-sidbar.html">A true story, that never been told!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 6m ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Technology</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <div class="post-thumbnail-entry">
+                        <a href="three-colum-sidbar.html"><img alt="" src="assets/images/side_post_img02.jpg"
+                            class="img-fluid" /></a>
+                        <div class="post-thumbnail-content">
+                          <a href="three-colum-sidbar.html">Beautiful nature, and rare feathers!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 24h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <div class="post-thumbnail-entry">
+                        <a href="three-colum-sidbar.html"><img alt="" src="assets/images/side_post_img03.jpg"
+                            class="img-fluid" /></a>
+                        <div class="post-thumbnail-content">
+                          <a href="three-colum-sidbar.html">The most happiest time of the day!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 11h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <!--post-thumbnail-list-->
+                    </div>
+                    <!--tab-pane-->
+                  </div>
+                  <div class="tab-pane fade" id="featured" role="tabpanel">
+                    <div class="post-thumbnail-list">
+                      <div class="post-thumbnail-entry">
+                        <img data-aos="fade-up" alt="" src="assets/image/side_post_img03.jpg" />
+                        <div class="post-thumbnail-content">
+                          <a href="#">Beautiful nature, and rare feathers!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 24h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <div class="post-thumbnail-entry">
+                        <img data-aos="fade-up" alt="" src="assets/image/side_post_img02.jpg" />
+                        <div class="post-thumbnail-content">
+                          <a href="#">The most happiest time of the day!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 11h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <div class="post-thumbnail-entry">
+                        <img data-aos="fade-up" alt="" src="assets/image/side_post_img01.jpg" />
+                        <div class="post-thumbnail-content">
+                          <a href="#">New costs and rise of the economy!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 11h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <!--post-thumbnail-list-->
+                    </div>
+                    <!--tab-pane-->
+                  </div>
+                  <div class="tab-pane fade" id="recent" role="tabpanel">
+                    <div class="post-thumbnail-list">
+                      <div class="post-thumbnail-entry">
+                        <img data-aos="fade-up" alt="" src="assets/image/side_post_img02.jpg" />
+                        <div class="post-thumbnail-content">
+                          <a href="#">The most happiest time of the day!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 11h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <div class="post-thumbnail-entry">
+                        <img data-aos="fade-up" alt="" src="assets/image/side_post_img01.jpg" />
+                        <div class="post-thumbnail-content">
+                          <a href="#">New costs and rise of the economy!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 11h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <div class="post-thumbnail-entry">
+                        <img data-aos="fade-up" alt="" src="assets/image/side_post_img03.jpg" />
+                        <div class="post-thumbnail-content">
+                          <a href="#">Beautiful nature, and rare feathers!</a>
+                          <span class="post-date"><span class="far fa-clock"></span> 24h ago</span>
+                          <span class="post-category"><span class="fa fa-tag"></span> Lifestyle</span>
+                          <!--post-thumbnail-content-->
+                        </div>
+                        <!--post-thumbnail-entry-->
+                      </div>
+                      <!--post-thumbnail-list-->
+                    </div>
+                    <!--tab-pane-->
+                  </div>
+                  <!--tab-content-->
+                </div>
+                <!--tabs-->
+              </div>
+              <!--widget-->
+            </div>
+            <div class="widget widget-categories">
+              <div class="widget-title font_weight_600">دسته بندی ها </div>
+              <ul>
+                {% for category in categories %}
+                <li class="cat-item">
+                  <a href="{% url 'blog:category' category.slug %}">{{ category.title }}</a>
+                  <span class="cat-count-span">({{ category.article_count }})</span>
+                </li>
+                {% endfor %}
+                
+              </ul>
+            </div>
+            
+            <div class="widget widget-tags">
+              <h4 class="widget-title font_weight_600">تگ ها</h4>
+              <div class="tags">
+                {% for cat in categories_article %}
+                  <a href="{% url 'blog:category' cat.slug %}">{{cat.title}}</a>
+                {% endfor %}
+                <!--tags-->
+              </div>
+              <!--widget-->
+            </div>
+            <!--theiaStickySidebar-->
+          </div>
+          <!--sidebar-->
+        </div>
+        <!--row-->
+      </div>
+    </div>
+    <!--container-->
+  </section>
+  <!-- Footer-Section -->
+
+
+   {% endblock content %}

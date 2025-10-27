@@ -1,0 +1,86 @@
+{% extends "registration/base.html" %}
+
+{% block title %} لیست مقالات {%endblock%}
+
+{% load static %}
+
+{% block main %}
+<div class="row">
+  <div class="col-12">
+    {% if object_list %}
+            <div class="card">
+              <div class="card-header">
+
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <thead>
+                    <tr role="row">
+                      <th >عنوان مقاله</th>
+                      <th >تصویر</th>
+                      <th >دسته بندی</th>
+                      <th >نویسنده</th>
+                      <th >خلاصه</th>
+                      <th >زمان مطالعه </th>
+                      <th >زمان انتشار</th>
+                      <th >وضعیت</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for article in object_list %}
+                      <tr role="row" class="odd">
+                        <td>
+                          {% if article.status == 'd' or user.is_superuser %}
+                            <a href="{% url 'account:blog-update' article.pk %}"> {{article.title}} </a>
+                          {%else %}
+                            {{article.title}}
+                          {% endif %}
+                        </td>
+                        <td> <img src="{{article.thumbnail.url}}" width="90" height="90" ></td>
+                        <td> {{article.category_to_str}}</td>
+                        <td> {{article.author}}</td>
+                        <td> {{article.description|striptags| truncatewords:20}}</td>
+                        <td> {{article.reading_time_minutes}}</td>
+                        <td> {{article.publish}}</td>
+                        <td>
+                          {% if article.status == 'p' %}
+                            <a href="{% url 'blog:detail' article.slug %}">
+                              <span class="badge bg-green">منتشر شده</span>
+                            </a>
+                          {% else %}
+                            <span class="badge bg-red">منتشر نشده </span>
+                          {% endif %}
+
+                          {% if user.is_superuser %}
+                            <a class="badge bg-red" href="{% url 'account:blog-delete' article.pk %}">حذف</a>
+                          {% endif %}
+                          <span class="badge bg-yellow">ادیت</span>
+                        </td>
+
+                      </tr>
+                    {% endfor %}
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+    {%else%}
+      <h1>محتوایی نیست</h1>
+    {% endif%}
+  </div>
+</div>
+
+{% endblock %}

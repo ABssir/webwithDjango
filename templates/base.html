@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+ {% load static %}
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Hint|{% block title%}{%endblock%}</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/images/favicons/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/images/favicons/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/images/favicons/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/images/favicons/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/images/favicons/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/images/favicons/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/images/favicons/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/images/favicons/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/favicons/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'assets/images/favicons/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/images/favicons/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'assets/images/favicons/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}"/> 
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/mobile.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/custom-style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/custom-style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/js/bootstrap.min.js' %}"/>
+
+</head>
+<body>
+    <!-- HEADER-SECTION -->
+    <div class="home-header-section">
+        <header class="header">
+            <div class="main-header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <a class="navbar-brand pt-0" href="/"><img src="{% static 'assets/images/redlight-logo.png' %}" alt="" class="img-fluid diverge-logo" /></a>
+                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon" style="border: 1px solid red;"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item " style="margin: 0 12px">
+                                            <a class="nav-link text-decoration-none navbar-text-color " href="/">صفحه اصلی</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="{% url 'about:about' %}">درباره ما</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="{% url 'services:services' %}">سرویس ها</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="{% url 'blog:blog' %}">مقالات</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link text-decoration-none navbar-text-color" href="{% url 'contact:contact' %}">ارتباط با ما</a>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-talk mr-auto">
+                                        <ul class="m-0 p-0">
+                                            <li class="list-unstyled d-lg-inline-block"><a class="nav-link contact" href="#">ثبت نام/ورود</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+        <!-- main -->
+        {% block content %}
+
+        {% endblock content %}
+        <!-- end main -->
+
+    <!-- Form-Section -->
+    <section class="blogs-section-starts form-section-starts overflow-hidden">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-section" data-aos="fade-up">
+                        <h3 class="text-center" data-aos="fade-up">به<span class="cyber-text">  Security Hint </span>بپیوندید</h3>
+                        <p class="text-center form-section-p rastchin" data-aos="fade-up-left">اگر علاقه‌مندید تا دانش و تخصص خود را در قالب تدریس، مقاله، ویدیو و غیره با سایر افراد علاقه‌مند به امنیت سایبری به اشتراک بگذارید، به ما بپیوندید
+
+                        </p>
+                        <div class="input-group mb-3 input-field-form">
+                            <input type="text" class="form-control input-form-input"
+                                placeholder="Enter your email address">
+                            <div class="input-group-append form-button">
+                               <button class="btn btn-form-section" type="submit">همکاری</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <!-- Footer-Section -->
+    <div class="footer-section">
+        <div class="about-right-icon">
+            <figure class="footer-icon"><img src="{% static 'assets/images/footer-left.png' %}" alt="" class="img-fluid">
+            </figure>
+        </div>
+        <div class="footer-outer-margin" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="footer-content1" data-aos="flip-left">
+                            <figure>
+                                <a href="/"><img src="{% static 'assets/images/redlight-logo.png' %}" alt="" class="img-fluid" /></a>
+                            </figure>
+                            <p class="red-light-footer-p rastchin">حفاظت از زیرساخت‌های حیاتی سازمان‌ها در برابر تهدیدات سایبری امری ضروری است. با اتخاذ راه‌حل‌های پیشرفته امنیت سایبری شامل پایش مستمر، شناسایی و پاسخ به تهدیدات، و آموزش کارکنان، می‌توان از اطلاعات و سیستم‌های حیاتی خود به بهترین نحو محافظت کرد
+
+                            </p>
+                            <div class="social-icons teams-social-icons">
+                                <ul class="list-unstyled">
+
+                                    <li><a href="" class="text-decoration-none red-hover"><i
+                                                class="fa-brands fa-square-twitter social-networks"></i></a></li>
+                                    <li><a href="" class="text-decoration-none red-hover"><i
+                                                class="fa-brands fa-linkedin social-networks"></i></a></li>
+                                    <li><a href="" class="text-decoration-none red-hover"><i
+                                                class="fa-brands fa-telegram social-networks"></i></a></li>
+                                    <li><a href="" class="text-decoration-none red-hover"><i
+                                                class="fa-brands fa-instagram  social-networks"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-xl-block d-none"></div> -->
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 d-lg-block d-none">
+                        <ul class="list-unstyled services-footer" data-aos="flip-left">
+                            <li class="list-item footer-margin-left">
+                                <h5 class="footer-link  footer-services-heading">
+                                    سرویس ها
+                                </h5>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="" class="text-decoration-none footer-link-p">
+                                    Threat Hunter
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="" class="text-decoration-none footer-link-p">
+                                    Incident Responder
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="" class="text-decoration-none footer-link-p">
+                                    Secure Managed IT
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="teams.html" class="text-decoration-none footer-link-p">
+                                    Compliance
+                                </a>
+                            </li>
+
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="testimonial.html" class="text-decoration-none footer-link-p">
+                                    Cyber Security
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="pricing.html" class="text-decoration-none footer-link-p">
+                                    Disaster Planning
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-12 d-md-block d-none">
+                        <ul class="list-unstyled support-footer" data-aos="flip-left">
+                            <li class="list-item footer-margin-left">
+                                <h5 class="footer-link footer-services-heading">
+                                    پشتیبابی
+                                </h5>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="" class="text-decoration-none footer-link-p">
+                                    صفحه اصلی
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="contact.html" class="text-decoration-none footer-link-p">
+                                    ارتباط با ما
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="services.html" class="text-decoration-none footer-link-p">
+                                    دانش محور
+                                </a>
+                            </li>
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="about.html" class="text-decoration-none footer-link-p">
+                                    درباره ی ما
+                                </a>
+                            </li>
+
+                            <li dir="ltr">
+                                <i class="fa-solid fa-caret-left"></i>
+                                <a href="faq.html" class="text-decoration-none footer-link-p">
+                                    سوالات متداول
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="footer-list">
+                            <div class="icon-list-box1" data-aos="flip-left">
+                                <ul class="list-unstyled contact-us-ul">
+                                    <li class="list-item">
+                                        <h5 class="footer-link footer-get-heading">
+                                            در تماس باشید
+                                        </h5>
+                                    </li>
+                                    <li class="list-item position-reletive addres-list icon-list1">
+                                        <div class="number"><a href="mailto:webmaster@example.com"
+                                                class="text-decoration-none footer-link-p ml-0"><span
+                                                    class="footer-additional">Email: </span> info@sechint.com</a></div>
+                                    </li>
+                                    <li class="list-item position-reletive addres-list icon-list1">
+                                        <div class="contact-number"><a href="tel:+4733378901"
+                                                class="text-decoration-none footer-link-p ml-0"><span
+                                                    class="footer-additional">Phone:</span> +98 993 449 8145</a></div>
+                                    </li>
+
+                                    <li class="list-item position-reletive addres-list icon-list1">
+                                        <div class="contact-address"><a href="#"
+                                                class="text-decoration-none footer-link-p ml-0"><span
+                                                    class="footer-additional">Addres: </span> Iran Mashhad</a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-bar-content w-100 overflow-hidden">
+                        <p class="text-size-16 mb-0">
+                            Copyright ©2024 sechint.com All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="{% static 'assets/js/animations.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom-script.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{% static 'assets/js/text-animations.js' %}"></script>
+
+
+</body>
+
+</html>

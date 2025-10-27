@@ -1,0 +1,15 @@
+@import url('https://cdn.fontcdn.ir/Font/Persian/Sahel/Sahel.css');
+
+body{
+
+
+    font-family: Sahel !important;
+}
+.myfont{
+    font-family: Sahel !important;
+}
+
+.error{
+    background: #B7412D;
+    color: #ffffff;
+}

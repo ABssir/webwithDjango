@@ -1,0 +1,179 @@
+<title>Services | SecHint</title>
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+    <!-- HEADER-SECTION -->
+    <div class="home-header-section">
+
+        <!-- BANNER-SECTION -->
+        <div class="home-banner-section overflow-hidden">
+            <div class="banner-container-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 mb-md-0 mb-4  text-center">
+                            <div class="about-banner-text"  data-aos="fade-up">
+                                <h1 class="text-white about-h1">سرویس ها</h1>
+                                <p class="text-white banner-paragraph">
+                                <br>
+                                </p>
+                                <div class="about-btn">
+                                    <a href="{% url 'services:services' %}" class="text-decoration-none">Home <span class="about-text-color"> / Services</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ICONS_SECTION -->
+    <section class="icons-section overflow-hidden">
+        <div class="container">
+        </div>
+    </section>
+
+
+    <!-- Services-About-us-Section -->
+    <section class="about-us-section-start about-us-section-2 overflow-hidden">
+        <div class="about-right-icon position-relative">
+            <figure class="about2-left-img"><img src="{% static 'assets/images/about-section2-left-img.png' %}" alt=""
+                    class="img-fluid">
+            </figure>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center offer-section-title"  data-aos="flip-up">آنچه ما ارائه می دهیم</h3>
+                    <p class="text-center"  data-aos="fade-left">ما با ارائه راهکارهای امنیت سایبری پیشرفته و شخصی‌سازی شده، اطمینان می‌دهیم که هر جنبه از سیستم‌های شما به طور کامل محافظت شود
+
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="about-us-content about-margin-bottom " data-aos="fade-up">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="{% static 'assets/images/about-section2-icon1.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <h4 class="rastchin">آموزش</h4>
+                        <p class="security-services-p rastchin">اموزش های ما در برگیرنده تمام نیاز های شمااست تا به شما را اهدافتان برساند  </p>
+                        <a href="about.html" class="text-decoration-none ">اطلاعات بیشتر <span class="forword-arrow"><i
+                                    class="fa fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="about-us-content about-margin-bottom" data-aos="fade-up">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0 icon-color"><img src="{% static 'assets/images/about-section2-icon2.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <h4 class="rastchin">تست نفوز</h4>
+                        <p class="security-services-p rastchin">انجام آزمون نفوز سامانه وب، شبکه داخلی و نرم افزار های موبایل</p>
+                        <a href="about.html" class="text-decoration-none ">اطلاعات بیشتر <span class="forword-arrow"><i
+                                    class="fa fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="about-us-content about-margin-bottom" data-aos="fade-up">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="{% static 'assets/images/about-section2-icon3.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <h4 class="rastchin">شکار تهدیدات سایبری</h4>
+                        <p class="security-services-p rastchin">شکارتهدیدها بصورت فعال و بافرضیه پردازی تا  پیداکردن ردپاهای احتمالی مهاجمان در زیرساخت سازمان شما</p>
+                        <a href="about.html" class="text-decoration-none ">اطلاعات بیشتر <span class="forword-arrow"><i
+                                    class="fa fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="about-us-content" data-aos="fade-up">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="{% static 'assets/images/about-section2-icon4.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <h4 class="rastchin">تیم قرمز</h4>
+                        <p class="security-services-p rastchin">شبیه سازی یک حمله و تهیه گزارش کام و گام به گام</p>
+                        <a href="about.html" class="text-decoration-none ">اطلاعات بیشتر <span class="forword-arrow"><i
+                                    class="fa fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="about-us-content" data-aos="fade-up">
+                        <div class="icons-rounded-box">
+                            <figure class="mb-0"><img src="{% static 'assets/images/about-round-icon1.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <h4 class="rastchin">مشاوره سازمانی</h4>
+                        <p class="security-services-p rastchin">شمارا یاری میدهیم تا به نتایج و اهداف امنیتی سازمانتان برسید</p>
+                        <a href="about.html" class="text-decoration-none ">اطلاعات بیشتر <span class="forword-arrow"><i
+                                    class="fa fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="about-us-content" data-aos="fade-up">
+                        <div class="icons-rounded-box rastchin">
+                            <figure class="mb-0"><img src="{% static 'assets/images/about-section2-icon6.png' %}" alt="">
+                            </figure>
+                        </div>
+                        <h4 class="rastchin">اگاهی رسانی امنیت سایبری</h4>
+                        <p class="security-services-p rastchin">مهم‌ترین نقطه‌ی ضعف امنیت سازمان شما عدم اگاهی کارکنانتان از تهدیدات سایبری کمین شده است</p>
+                        <a href="about.html" class="text-decoration-none ">اطلاعات بیشتر <span class="forword-arrow"><i
+                                    class="fa fa-angle-right"></i></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services-Security-Option -->
+    <section class="Services-Security-Option  Services-Security-Option-services-page overflow-hidden">
+    <div class="about-right-icon position-relative">
+        <figure class="whyus-icon"><img src="./assets/images/about-us-section-right-icon.png" alt="" class="img-fluid">
+        </figure>
+    </div>
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 mb-md-0 mb-4">
+                <div class="about-us-section-page" data-aos="fade-up">
+                   <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h3  data-aos="zoom-out-left">24/7 Cyber Security Operation Center</h3>
+                                    <br>
+                                    <p></p>
+                                     <ul class="list-unstyled about-us-list">
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">Website Security Services</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">SIEM Threat Detection</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">Content Delivery Network</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">24/7 Hours services</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">Security Management</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">Instant Malware Removal</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">Website Hack Repair</a></li>
+                                         <li><i class="fa-solid fa-shield-virus"></i><a href="#" class="text-decoration-none list-text">Instant Malware Removal</a></li>
+                                     </ul>
+                                     <div class="banner-btn-about discover-btn-banner about-order-services"><a href="{% url 'services:services' %}" class="text-decoration-none">سفارش سرویس</a>
+                                         <a href="{% url 'contact:contact' %}" class="text-decoration-none play-button">راهنمایی رایگان</a></div></div>
+                                 <div class="col-lg-5 col-md-5 col-sm-12">
+                                     <div class="about-section-img">
+                                         <figure class="mb-0"><img src="{% static 'assets/images/about-us-page-right-img.png' %}" alt="" class="">
+                                         </figure>
+                         </div>
+                     </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    
+      </div>
+  </section>
+
+
+    <!-- Form-Section -->
+
+
+{% endblock content %}
