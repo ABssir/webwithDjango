@@ -1,4 +1,4 @@
-# 🌐 WebwithDjango
+# 🌐 Web with Django
 
 A web project built with **Django** and **Python** 🐍  
 Frontend: HTML, CSS, JavaScript  
